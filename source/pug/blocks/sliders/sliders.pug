@@ -1,0 +1,109 @@
+mixin bigSlider()
+	+b.big-slider
+		+e.slide
+			img(src='img/big-slider.jpg')
+		+e.A.btn(href='#') Смотреть товары
+
+
+mixin brendsSlider()
+	+b.brand-slider
+		+e.list
+			+e.IMG.slide(src='img/brand-slider/slide1.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide3.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide1.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide3.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide1.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide3.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide1.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide3.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
+
+
+mixin brendsSliderTitle(title)
+	+b.brand-slider
+		.container
+			+e.H2.title= title
+		+e.list
+			+e.IMG.slide(src='img/brand-slider/slide1.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide3.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide1.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide2.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide3.jpg')
+			+e.IMG.slide(src='img/brand-slider/slide4.jpg')
+
+mixin saleSlider()
+	+b.sale-slider
+		+e.list
+			- for (var x = 0; x < 3; x++)
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide1.jpg')
+					+e.text до
+						br
+						| 25%
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide2.jpg')
+					+e.text до
+						br
+						| 25%
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide3.jpg')
+					+e.text до
+						br
+						| 25%
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide4.jpg')
+					+e.text до
+						br
+						| 25%
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide1.jpg')
+					+e.text до
+						br
+						| 25%
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide2.jpg')
+					+e.text до
+						br
+						| 25%
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide3.jpg')
+					+e.text до
+						br
+						| 25%
+			+e.item
+				+e.A.link(href='#')
+					+e.IMG.img(src='img/brand-slider/slide4.jpg')
+					+e.text до
+						br
+						| 25%
+
+
+
+mixin slider-buttons()
+	BUTTON.btn-prev.brand-slider__btn-prev
+		+icon('icon-arrow-left')
+	BUTTON.btn-next.brand-slider__btn-next
+		+icon('icon-arrow-right')
+
+	BUTTON.btn-prev.brand-slider__btn-prev
+		+icon('icon-arrow-left')
+	BUTTON.btn-next.brand-slider__btn-next
+		+icon('icon-arrow-right')

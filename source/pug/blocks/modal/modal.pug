@@ -1,0 +1,207 @@
+mixin form-wrap()
+  +b.modal-wrap&attributes(attributes)
+    form(novalidate)
+      block
+
+mixin input(t , pl)
+  +e.input-wrap
+    +e.INPUT.input(type= t placeholder= pl)&attributes(attributes)
+  // +e.input-wrap
+mixin inputErr(t , pl)
+  +e.input-wrap
+    +e.INPUT.input--error(type= t placeholder= pl)&attributes(attributes)
+  // +e.input-wrap
+
+mixin inputLabel(t , pl)
+  +e.input-wrap--label
+    +e.INPUT.input(type= t)&attributes(attributes)
+    +e.LABEL.label(for= t)= pl
+  // +e.input-wrap
+
+mixin footerForm(text , link)
+  +e.footer
+    div.text= text
+    +e.A.link--footer(href='#')= link
+
+mixin socInfo(name , vlue)
+  +e.soc-info
+    div= name
+    div.text-primary= vlue
+
+
+
+mixin modals()
+
+  +form-wrap()(id="modal-dialog" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
+    +e.head
+      +icon('icon-user')
+      +e.title Диалоговое окно
+    +e.body
+      +e.text.text-center На вашу почту мы отправили инструкцию по востановлению пароля (или другая возможная информация)
+      +e.btn--small.btn(type="submit") OK
+      //диалоговое окно
+
+  +form-wrap()(id="modal-recover-email" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
+    +e.head
+      +icon('icon-user')
+      +e.title Забыли пароль?
+    +e.body
+      +e.text.text-center Укажите Ваш e-mail, либо введите номер телефона
+      .row.justify-content-center
+        .col-12
+          +inputLabel("email","Ваш email")(required)
+      +e.btn.btn(type="submit"  )  Сбросить пароль
+    +footerForm('Вспомнили пароль? ', 'Войти')
+    //введите пароль для восстановления
+
+  +form-wrap()(id="modal-recover-sms" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
+    +e.head
+      +icon('icon-user')
+      +e.title Забыли пароль?
+    +e.body
+      +e.text.text-center Введите код из смс
+      .row.justify-content-center
+        .col-12
+          +inputLabel("email","Ваш email")(required)
+      +e.btn.btn(type="submit"  )  Сбросить пароль
+    +footerForm('Вспомнили пароль? ', 'Войти')
+    //sms
+
+
+  +form-wrap()(id="modal-recover-new-pass" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
+    +e.head
+      +icon('icon-user')
+      +e.title Забыли пароль?
+    +e.body
+      +e.text.text-center Создайте новый пароль
+      .row.justify-content-center
+        .col-12
+          +inputLabel("password","Пароль")(required)
+          +input("password","Повторить пароль")(required)
+      +e.btn.btn(type="submit")  Сбросить пароль
+  //new парот
+
+
+
+  +form-wrap()(id="modal-reg-soc" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
+    +e.head
+      +icon('icon-user')
+      +e.title Регистрация через соц. сеть
+    +e.body
+      +e.text.text-center Заполните дополнительную информацию
+      .row.justify-content-center
+        .col-12
+          +socInfo('E-mail', 'sadavan@yandex.ru')
+          +socInfo('Имя', 'Виктория Александровская')
+          +inputLabel("password","Пароль")(required)
+          +input("password","Повторить пароль")(required)
+          +input("tel","+7(999)999-99-99")(required)
+      +e.btn--reg.btn(type="submit") Регистрация
+      +b.LABEL.custom-checkbox(for='1')
+        +e.INPUT.input(type='checkbox' checked id='1')
+        +e.SPAN.name Я даю свое согласие на обработку персональных данных согласно &nbsp;
+          |
+          a.modal-wrap__link(href='#') Политике конфиденциальности
+      +b.LABEL.custom-checkbox(for='2')
+        +e.INPUT.input(type='checkbox' checked id='2')
+        +e.SPAN.name Получать лучшие предложения (редко)
+    +footerForm('Есть аккаунт? ', ' Войти')
+  //рег через соцсети
+
+
+
+  +form-wrap()(id="modal-reg" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
+    +e.head
+      +icon('icon-user')
+      +e.title Регистрация
+    +e.body
+      +e.text.text-center Заполните информацию о себе
+      .row.justify-content-center
+        .col-12
+          +inputLabel("E-mail","E-mail")(required)
+          +inputLabel("password","Пароль")(required)
+          +input("password","Повторить пароль")(required)
+          +input("text","Ваше имя")(required)
+          +input("text","Ваша фамилия")(required)
+          +input("tel","+7(999)999-99-99")(required)
+      +b.LABEL.custom-checkbox(for='2')
+          +e.INPUT.input(type='checkbox' checked id='2')
+          +e.SPAN.name Я косметолог
+      +e.add-file
+        input.visually-hidden#passport(type='file')
+        +e.LABEL.add-file-wrapper(for='passport')
+          +e.add-file-label Загрузите Ваше фото с разворотом паспорта
+          span.modal-wrap__add-file-btn Выбрать файл
+          //+e.SPAN.file-name asdasd.png
+      +e.add-file
+        input.visually-hidden#passport(type='file')
+        +e.LABEL.add-file-wrapper(for='passport')
+          +e.add-file-label Фото диплома или документа об образовании
+          span.modal-wrap__add-file-btn Выбрать файл
+          //+e.SPAN.file-name asdasd.png
+      +e.btn--reg.btn(type="submit") Регистрация
+    +e.text--small Нажимая на кнопку "регистарция" вы соглашаетесь на обработку персональных данных в соответствии с &nbsp;
+        |
+        +e.A.link(href='#') Оферой
+        | &nbsp; и
+        +e.A.link(href='#')  Политикой конфиденциальности
+    +b.LABEL.custom-checkbox(for='2')
+      +e.INPUT.input(type='checkbox' checked id='2')
+      +e.SPAN.name Получать лучшие предложения (редко)
+
+    +e.alt-reg Зарегистрироваться с помощью
+    //+e.soc-list
+    //  +e.A.soc-item(href='#')
+    //   +icon('icon-vk')
+    //  +e.A.soc-item(href='#')
+    //    +icon('icon-instagram')
+    //  +e.A.soc-item(href='#')
+    //    +icon('icon-fb')
+    script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+    script(src="https://yastatic.net/share2/share.js")
+    .ya-share2(data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
+    +footerForm('Есть аккаунт? ', ' Войти')
+  //рег
+
+  +form-wrap()(id="modal-login" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
+    +e.head
+      +icon('icon-user')
+      +e.title Вход
+    +e.body
+      +e.text.text-center Введите Ваши данные для входа
+      .row.justify-content-center
+        .col-12
+          +inputLabel("E-mail","E-mail")(required)
+          +inputLabel("password","Пароль")(required)
+        .col-auto.ml-auto.mb-2
+          +e.A.link--footer(href='#') Забыли пароль?
+      +e.btn.btn(type="submit") Войти
+    +e.alt-reg Войти с помощью
+    script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+      script(src="https://yastatic.net/share2/share.js")
+      .ya-share2(data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
+    +footerForm('Нет аккаунта?  ', ' Зарегистрироваться')
+  //рег
+
+  //введите код из смс
+
+  +form-wrap()(id="modal-sms" class="zoom-anim-dialog mfp-hide modal-win modal-form ")
+    +e.head
+      +icon('icon-user')
+      +e.title Забыли пароль?
+    +e.body
+      +e.text.text-center Введите код из смс
+      .row.justify-content-center
+        .col-12
+          +e.input-wrap--sms
+            +e.INPUT.input(type='password')
+            +e.sms-placeholder
+              +e.SPAN.sms-placeholder-dot
+              +e.SPAN.sms-placeholder-dot
+              +e.SPAN.sms-placeholder-dot
+              +e.SPAN.sms-placeholder-dot
+      +e.btn.btn(type="submit") Сбросить пароль
+    +footerForm('Вспомнили пароль? ', ' Войти')
+
+
+

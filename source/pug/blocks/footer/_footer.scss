@@ -1,0 +1,225 @@
+.footer {
+  background: #333333;
+  padding-top: 23px;
+  padding-bottom: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  //margin-top: 35px;
+  @include media-breakpoint-up(md) {
+    padding-top: 57px;
+    padding-bottom: 97px;
+    //margin-top: 70px;
+  }
+  & a{
+    &:hover{
+      color: white;
+    }
+  }
+  & .footer__link:hover {
+    color: #9FA3A7;
+  }
+}
+
+.footer__mobile-contacts {
+  order: 1;
+  width: 50%;
+  @include media-breakpoint-up(md) {
+    order: 2;
+  }
+}
+
+.footer-nav {
+  order: 2;
+  width: 50%;
+  padding-left: 15px;
+  @include media-breakpoint-up(md) {
+    order: 1;
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+    max-height: 163px;
+  }
+}
+
+//.footer__phone-list {
+//  margin-top: 3px;
+//}
+
+
+.footer-nav__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav__item {
+  margin-bottom: 10px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 4px;
+  }
+}
+
+.footer-nav__link {
+  text-transform: uppercase;
+  color: #FFC80A;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.footer__copyright {
+  margin-top: 40px;
+  font-size: 10px;
+  color: #FFFFFF;
+  @include media-breakpoint-up(md) {
+    color: #FFFFFF;
+    font-size: 12px;
+    margin-top: 0px;
+    order: 2;
+  }
+}
+
+.footer__logo {
+  display: block;
+  width: 91px;
+  margin-bottom: 15px;
+  @include media-breakpoint-up(md) {
+    width: 150px;
+    margin-bottom: 0;
+  }
+}
+
+.footer-catalog,
+.services {
+  margin-top: 20px;
+  @include media-breakpoint-up(md) {
+    margin-top: 0;
+  }
+}
+
+
+.footer-catalog__item-link,
+.services__item-link {
+  color: $white;
+  font-size: 12px;
+}
+
+.services__title,
+.footer-catalog__title,
+.pay-method__title {
+  color: #9FA3A7;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1;
+  margin-bottom: 14px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-catalog__item,
+.services__item {
+  margin-bottom: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.services__title--additional {
+  margin-top: 20px;
+  @include media-breakpoint-up(md) {
+    margin-top: 62px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__phone-num {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+
+.footer__phone-description {
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 200;
+  line-height: 1;
+  margin-bottom: 3px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+
+}
+
+.pay-method {
+  width: 50%;
+  padding-left: 15px;
+  @include media-breakpoint-up(md) {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+.pay-method__title {
+  margin-bottom: 15px;
+}
+
+.pay-method__wrapper {
+  margin-top: 20px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 57px;
+    margin-top: 0;
+  }
+}
+
+.footer__link {
+  text-decoration: underline;
+  color: $white;
+  margin-bottom: 15px;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+}
+
+.pay-method__img {
+  margin-right: 15px;
+}
+
+.footer {
+  .soc {
+    width: 50%;
+    margin-top: 25px;
+    margin-bottom: 39px;
+    @include media-breakpoint-up(md) {
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  .icon {
+    fill: white;
+    padding: 5px;
+    margin-right: 6px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+
+

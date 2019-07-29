@@ -1,0 +1,30 @@
+mixin header-nocat()
+
+	// start HEADER.header
+	+b.HEADER.header
+		block
+		+b.header-cat.header-cat--down.d-none.d-xl-block
+			+e.wrapper.container
+				+e.A.link(href='#')
+					img(src='img/cat.png' width='183')
+	// end HEADER.header
+mixin header-cat-top()
+
+	// start HEADER.header
+	+b.HEADER.header
+		block
+		+b.header-cat.d-none.d-xl-block
+			+e.wrapper.container
+				+e.A.link(href='#')
+					img(src='img/cat.png' width='183')
+	// end HEADER.header
+mixin header-cat-down()
+
+	// start HEADER.header
+	+b.HEADER.header
+		block
+		+b.header-cat.header-cat--down.d-none.d-xl-block
+			+e.wrapper.container
+				+e.A.link(href='#')
+					img(src='img/cat.png' width='183')
+	// end HEADER.header

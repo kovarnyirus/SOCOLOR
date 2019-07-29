@@ -1,0 +1,20 @@
+.header{
+  position: relative;
+}
+.header-cat{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &__wrapper{
+    position: relative;
+  }
+  &__link{
+    position: absolute;
+    left: 15px;
+    transform: translateX(-100%);
+  }
+  &--down{
+    top: 501px;
+  }
+}

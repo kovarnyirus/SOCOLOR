@@ -1,0 +1,270 @@
+mixin brand()
+  // .brand-block
+  +b.dropdown-brand
+    +e.A.link(href="#") A-Derma
+      span Франция
+    +e.A.link(href="#") Ahava
+      span Франция
+    +e.A.link(href="#") American
+      span Франция
+    +e.A.link(href="#") Aravia
+      span Франция
+    +e.A.link(href="#") Avene
+      span Франция
+
+  // /.brand-block
+
+mixin soc(name)
+  +e.A.item(href="" target="_blank")
+    svg(class="icon " + name)
+      use(xlink:href="img/svg/sprite.svg#" + name)
+
+
+mixin icon(name,mod)
+  - mod = mod || ''
+  svg(class="icon " + name + ' ' + mod)
+    use(xlink:href="img/svg/sprite.svg#" + name)
+
+mixin dropdown-catalog ()
+  +b.catalog-dropdown
+    .row
+      .col-2
+        +e.UL.list
+          +e.LI.item--title НОВИНКИ
+          +e.LI.item РАСПРОДАЖА
+          +e.LI.item ЛИЦО
+          +e.LI.item МАКИЯЖ
+          +e.LI.item ТЕЛО
+          +e.LI.item НОГТИ
+          +e.LI.item ДЕТИ
+          +e.LI.item ДОМ
+          +e.LI.item МУЖЧИНАМ
+          +e.LI.item ПАРФЮМЕРИЯ
+          +e.LI.item ГИГИЕНА
+          +e.LI.item ЗДОРОВЬЕ
+      .col-2
+
+mixin banner(src)
+  +b.banner-wrapper
+    +e.A.link
+      +e.IMG.img(src='img/' + src)
+
+mixin bannerHead()
+    .row.mb-4
+      .col-12.col-md-4.mb-2
+        a(href='#')
+          img(src='img/image9.jpg', alt='img')
+      .col-12.col-md-4.mb-2
+        a(href='#')
+          img(src='img/image10.jpg', alt='img')
+      .col-12.col-md-4.mb-2
+        a(href='#')
+          img(src='img/image11.jpg', alt='img')
+
+mixin banner4()
+  +b.banner-wrapper
+    .row.mb-5
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image1.jpg")
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image2.jpg")
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image3.jpg")
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image4.jpg")
+
+mixin banner2()
+  +b.banner-wrapper
+    .row.mb-5
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image1.jpg")
+      .col-12.col-md-6
+        a(href="#")
+          img(src="img/image2.jpg")
+
+mixin banner3()
+  +b.banner-wrapper
+    .row.mb-5
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image6.jpg")
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image7.jpg")
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image8.jpg")
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image6.jpg")
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image7.jpg")
+      .col-12.col-md-4
+        a(href="#")
+          img(src="img/image8.jpg")
+
+mixin product-item(img, title, description, size)
+  +b.product-item
+    +e.img-wrap(href="#")
+      +e.IMG.img(src=`img/product/product${img}.jpg`, alt="img")
+    +e.A.description(href='#')= description
+    +e.A.title(href='#')= title
+    +e.TABLE.price
+      tr
+        +e.TD.price-name price
+        +e.TD.price-val 1251 p
+      tr
+        +e.TD.price-name mini sale
+        +e.TD.price-val 531 p
+      tr
+        +e.TD.price-name maxi sale
+        +e.TD.price-val 490 p
+      tr
+        +e.TD.price-name sale
+        +e.TD.price-val 490 p
+      tr
+        +e.TD.price-name VIP
+        +e.TD.price-val узнать цену
+    +e.icons
+      +e.A.favourites
+        +icon('icon-favourites')
+      +e.A.like
+        +icon('icon-like')
+      +e.A.basket(href='')
+        +icon('icon-basket')
+
+mixin catalogItems(rows)
+  .product-list
+    - for (var x = 0; x < rows; x++)
+      +product-item('1', 'Alan Hadash Murumuru', 'Масло для поврежденных, вьющихся жестких волос с маслом мурумуру', '19 мл')
+      +product-item('2', 'Alerana', 'Бальзам-ополаскиватель для всех типов волос', '200 мл')
+      +product-item('3', 'Alan Hadash Murumuru', 'Крем защитный для кожи головы ', '100 мл')
+      +product-item('4', 'Alan Hadash Murumuru', 'Спрей-термозащита', '150 мл')
+
+mixin stars(active, num)
+  +b.stars
+    +e.wrapper.row.align-items-center
+      .col-auto
+        - for (var x = 0; x < 5; x++)
+          if x < active
+            +e.SPAN.item--active: +icon("icon-star")
+          else
+            +e.SPAN.item: +icon("icon-star")
+      .col-auto.pl-0
+        span.num= num
+
+mixin starsLine(active, num, line )
+  +b.stars
+    .d-flex.align-items-center
+      .col-6.col-xl-5.col-xxl-4
+        +e.wrapper.d-flex.align-items-center
+          - for (var x = 0; x < 5; x++)
+              if x < active
+                +e.SPAN.item--active: +icon("icon-star")
+              else
+                +e.SPAN.item: +icon("icon-star")
+          .col-auto.pl-2.pr-0
+            span.num= num
+      .col-6.col-xl-7.col-xxl-8.pl-0.pr-0
+        .d-flex.align-items-center
+          +e.line
+            +e.line-active(style='width:' +line +'%')
+
+mixin star(namber)
+  +b.stars
+    +e.wrapper.row.align-items-center
+      .col-auto
+        - for (var x = 0; x < 5; x++)
+          if x < namber
+            +e.SPAN.item--active: +icon("icon-star")
+          else
+            +e.SPAN.item: +icon("icon-star")
+
+mixin category()
+  +b.product-category
+    +e.h2.title Категории этого товара:
+    +e.UL.list
+      each item in ['Корейская бытовая химия', 'Дом', 'Средства для стирки', 'Гели и жидкости для стирки', 'Еще категория']
+          +e.LI.item
+            +e.A.link(href='')= item
+    a.reed-more.reed-more--dots(href='#')
+      span.reed-more__dot
+      span.reed-more__dot
+      span.reed-more__dot
+
+mixin discount(num)
+  span.discount= num + '%'
+
+mixin discountType(num, text)
+  .discount__wrapper
+    span.discount.discount--big= num + '%'
+    apsn.discount__text= text
+
+mixin advantages()
+  +b.advantages
+    .row
+      +e.item.col-12.col-sm-4
+        +icon('icon-best-price')
+        |
+        span Лучшая цена
+      +e.item.col-12.col-sm-4
+        +icon('icon-guarantee')
+        |
+        span Гарантия возврата
+      +e.item.col-12.col-sm-4
+        +icon('icon-original')
+        |
+        span Оригинальная косметика
+
+mixin productHeadInfo(name, text)
+  .product-feature= name + ': '
+    span= text
+
+mixin productHeadInfoSelectedText(name, text)
+  .product-feature= name + ': '
+    span.success-text-color= text
+
+mixin noProduct(text)
+  .row.align-items-center
+    .col-12.col-md-4.no-production= text
+    .col-12.col-md-4
+      a(href='#')
+        +banner('all-brands.jpg')
+    .col-12.col-md-4
+      a(href='#')
+        +banner('new-prod.jpg')
+
+mixin mnu()
+  - var nav= {"ВОЛОСЫ":"#","ЛИЦО":"#","МАКИЯЖ ":"#","МАКИЯЖ ":"#","ТЕЛО ":"#","НОГТИ ":"#","ДЕТИ ":"#","ДОМ ":"#","МУЖЧИНАМ ":"#","ПАРФЮМЕРИЯ ":"#","ГИГИЕНА ":"#","ЗДОРОВЬЕ ":"#","ПРОЧЕЕ ":"#"}
+  +e.nav
+    +e.item
+      +b.dropdown-cat
+        +e.link--toggle-js(href="#") КАТАЛОГ
+        +e.menu
+          .d-none.d-lg-block
+            - var nav2= {"Электронные шлемы MCScap":"#","Электроды, гель и аксессуары":"#","Электроды":"#","Текстильные шлемы":"#","Адаптеры":"#","Гель и аксессуары":"#","Мобильная система NeoRecCap":"#"}
+            +b.dropdown-cat-has-children.custom-scroll-js
+              each linkPatch, linkName in nav2
+                +e.item--js
+                  +e.item-inner
+                    +e.A.link(href= linkPatch)= linkName
+                  +b.dropdown-cat-sub-wrap.custom-scroll-js
+                    .row
+                      .col-7
+                        +e.text-block
+                          +e.title= linkName
+                          +e.text Краткое описание текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М
+                          +e.A.btn(href="#") В раздел
+
+                      .col
+                        img.res-i(src="img/nav-img.png", alt="")
+              +e.A.btn(href="#") Создать свой MCScap
+
+    each linkPatch, linkName in nav
+      +e.item: +e.A.link(href= linkPatch)= linkName

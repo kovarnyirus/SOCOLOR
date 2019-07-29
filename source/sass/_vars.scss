@@ -1,0 +1,28 @@
+// Colors
+$white: #ffffff;
+$black: #000000;
+$text-color: #4D4D4D;
+$rejected-color: #EB5757;
+$highlighted-color: #9FA3A7;
+$hover-bg: #82C456;
+$active-bg: #459014;
+$select-color: #5CBF1A;
+$success-color: #5CBF1A;
+$check-color: #F2994A;
+$attention-color: #BE0B58;
+
+// Sizes
+$base-font-size: 14px;
+
+$breakpoints: (
+        "phone"       : 400px,
+        "phone-wide"  : 480px,
+        "phablet"     : 560px,
+        "tablet-small": 640px,
+        "tablet"      : 768px,
+        "tablet-wide" : 1024px,
+        "desktop"     : 1248px,
+        "desktop-wide": 1414px
+);
+
+$content-size: 1414px;

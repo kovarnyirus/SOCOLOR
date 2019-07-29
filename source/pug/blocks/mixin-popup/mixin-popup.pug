@@ -1,0 +1,76 @@
+mixin cookies()
+  +b.cookies
+    .container
+      +e.P.message Мы используем файлы cookie и сбор персональных данных, чтобы предоставить вам лучший пользовательский сервис и показывать вам индивидуальные предложения на нашем сайте. Продолжая просматривать наш веб-сайт, вы соглашаетесь c использованием cookie и обработкой персональных данных.
+        +e.A.link(href='#') Узнать больше
+      +e.BUTTON.btn.btn-cloce X
+
+mixin map()
+  +b.place-selection.container.zoom-anim-dialog.mfp-hide#popup-map
+    .row
+      .col-12.col-md-8
+        .row.place-selection__container
+          .col-12.col-md-8
+            +e.map#map
+              iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Afc40b5b4f8a1a4d7c7abcc8d922a446f4e31544f3c1c365f26e0c7286af194ac&source=constructor', width='100%', height='100%', frameborder='0')
+          .col-12.col-md-4
+            +e.list.custom-scroll-js
+              +e.item
+                +e.address
+                  +e.address-title Адрес:
+                  +e.address Анапа, ул. Гребенская, 111	Телефон: 8 800 669 88 99
+                +e.work-time
+                  +e.work-timetitle Режим работы:
+                  +e.work-time Пн-Пт 10:00-19:00
+                    |
+                    br
+                    | Сб 10:00-16:00
+                +e.BUTTON.btn.btn Выбрать
+              +e.item
+                +e.address
+                  +e.address-title Адрес:
+                  +e.address Анапа, ул. Гребенская, 111	Телефон: 8 800 669 88 99
+                +e.work-time
+                  +e.work-time-title Режим работы:
+                  +e.work-time Пн-Пт 10:00-19:00
+                    |
+                    br
+                    | Сб 10:00-16:00
+                +e.BUTTON.btn.btn Выбрать
+              +e.item
+                +e.address
+                  +e.address-title Адрес:
+                  +e.address Анапа, ул. Гребенская, 111	Телефон: 8 800 669 88 99
+                +e.work-time
+                  +e.work-time-title Режим работы:
+                  +e.work-time Пн-Пт 10:00-19:00
+                    |
+                    br
+                    | Сб 10:00-16:00
+                +e.BUTTON.btn.btn Выбрать
+              +e.item
+                +e.address
+                  +e.address-title Адрес:
+                  +e.address Анапа, ул. Гребенская, 111	Телефон: 8 800 669 88 99
+                +e.work-time
+                  +e.work-time-title Режим работы:
+                  +e.work-time Пн-Пт 10:00-19:00
+                    |
+                    br
+                    | Сб 10:00-16:00
+                +e.BUTTON.btn.btn Выбрать
+              +e.item
+                +e.address
+                  +e.address-title Адрес:
+                  +e.address Анапа, ул. Гребенская, 111	Телефон: 8 800 669 88 99
+                +e.work-time
+                  +e.work-time-title Режим работы:
+                  +e.work-time Пн-Пт 10:00-19:00
+                    |
+                    br
+                    | Сб 10:00-16:00
+                +e.BUTTON.btn.btn Выбрать
+
+
+
+
