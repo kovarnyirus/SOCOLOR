@@ -1,0 +1,29 @@
+mixin header()
+
+	// start HEADER.header
+	+b.HEADER.header
+		.container
+			+e.wrapper
+				+e.left
+					+top-nav()
+					+e.A.logo-link(href='/')
+						+e.IMG.logo(src='img/mobile-logo.png' alt='logo')
+				+e.right
+					+e.login
+						+e.A.login-link(href='#')
+							+icon('icon-padlock')
+					+e.basket
+						+e.A.basket-link
+							+e.basket-icon(href='#')
+								+icon('icon-basket')
+							+e.basket-cost 123 р.
+					+e.search
+						+e.A.search-link(href='#')
+							+icon('icon-search')
+
+
+
+
+
+		//block
+	// end HEADER.header

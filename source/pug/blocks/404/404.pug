@@ -1,0 +1,14 @@
+mixin error-page()
+	+b.error-page
+		.container
+			+e.IMG.img(src='img/404.png')
+			h2.title-line Ошибка 404 — страница не найдена!
+			p.description К сожалению, мы не смогли найти запрашиваемую Вами страницу.
+				br/ Но мы нашли для Вас товары по лучшим ценам:
+		+products-more('Удивите меня ещё')
+		.container
+			a.btn.btn--black Каталог товаров
+				+icon('icon-arrow-right')
+			a.btn.btn--orange Бренды
+				+icon('icon-arrow-right')
+

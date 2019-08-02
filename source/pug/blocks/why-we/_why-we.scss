@@ -1,0 +1,57 @@
+.why-we {
+  background-image: url("../img/why-we/mobile-bg.jpg");
+  background-size: cover;
+  padding-top: 30px;
+  color: white;
+  padding-bottom: 25px;
+
+  &__title {
+    font-size: 30px;
+
+
+    &:before {
+      top: 1em;
+    }
+
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__img-wrapper {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    background-color: rgba(15, 15, 15, 0.71);
+    border-radius: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+
+  &__item-title {
+    padding-top: 15px;
+    position: relative;
+    text-transform: uppercase;
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 4px;
+      background-color: $danger-color;
+    }
+  }
+}

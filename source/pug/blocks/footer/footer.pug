@@ -1,73 +1,50 @@
 mixin footer()
-  +b.FOOTER.footer
-    .container
-      .row
-        .col-12.col-md-2.d-flex.flex-wrap
-          +b.NAV.footer-nav
-            +e.UL.list
-              +e.LI.item
-                +e.A.link(href='') кто мы
-              +e.LI.item
-                +e.A.link(href='') контакты
-              +e.LI.item
-                +e.A.link(href='') отзывы
-              +e.LI.item
-                +e.A.link(href='') новинки
-              +e.LI.item
-                +e.A.link(href='') Манул
-          +e.copyright.d-none.d-md-block 2009-2019 © Beautydiscount.ru - профессиональная брендовая косметика и парфюмерия по оптовым ценам
-          +e.mobile-contacts
-            +e.A.logo
-              img(src='img/footer-logo.png')
-            +e.phone-list.d-block.d-md-none
-              +e.phone
-                +e.A.phone-num(href='#') 8 (800) 775-46-36
-                +e.phone-description Звонок бесплатный
-              +e.phone
-                +e.A.phone-num(href='#') 8 (499) 645-53-65
-                +e.phone-description Для Москвы и МО
-        .col-6.col-md-2.offset-md-1
-          +b.NAV.footer-catalog
-            +e.H2.title Каталог
-            +e.UL.list
-              -var categoryArr = ['Волосы', 'Лицо', 'Макияж', 'Тело', 'Ногти', 'Дети', 'Дом', 'Мужчинам', 'Парфюмерия', 'Гигиена', 'Здоровье', 'Прочее']
-              each cat in categoryArr
-                +e.LI.item
-                  +e.A.item-link(href="#")=cat
-        .col-6.col-md-2
-          +b.services
-            +e.H2.title Сервис и поддержка
-            +e.UL.list
-              -var serv = ['Как покупать', 'Возвраты и обмены', 'Доставка и оплата', 'Личный кабинет', 'Опт', 'Политика конфиденциальности']
-              each item in serv
-                +e.LI.item
-                  +e.A.item-link(href="#")=item
-
-            +e.H2.title--additional ДОПОЛНИТЕЛЬНЫЕ СЕРВИСЫ
-            -var addserv = ['Мобильное приложение', 'BDC Статьи', 'Пункты самовывоза']
-            each item in addserv
-              +e.LI.item
-                +e.A.item-link(href="#")=item
-        .col-12.col-md-2.offset-md-2.d-flex.d-md-block.flex-wrap
-          +e.phone-list.d-none.d-md-block
-            +e.phone
-              +e.A.phone-num(href='#') 8 (800) 775-46-36
-              +e.phone-description Звонок бесплатный
-            +e.phone
-              +e.A.phone-num(href='#') 8 (499) 645-53-65
-              +e.phone-description Для Москвы и МО
-          +e.copyright.d-block.d-md-none 2009-2019 © Beautydiscount.ru - профессиональная брендовая косметика и парфюмерия по оптовым ценам
-          +b.soc
-            +soc('icon-fb')
-            +soc('icon-instagram')
-            +soc('icon-vk')
-          +b.pay-method
-            +e.H2.title.d-none.d-md-block Способы оплаты
-            +e.wrapper
-              +e.IMG.img(src='img/visa.png')
-              +e.IMG.img(src='img/mastercard.png')
-          +e.A.link(href="#")  Политика конфиденциальности
-          +e.A.link(href="#")  Пользовательское соглашение
+	+b.FOOTER.footer
+		+e.top
+			+e.links.footer-item
+				+e.A.full-ver(href='#')
+					+icon('icon-laptop')
+					| Полная версия
+				+e.A.download-app(href='#')
+					+icon('icon-smartphone')
+					| Скачать приложение
+			+e.phones.footer-item
+				+e.A.phone(href='tel:+78007755685') 8 (800) 775-56-85
+				+e.A.phone(href='tel:+74957896928') 8 (495) 789-69-28
+				+e.A.callback(href='#') Заказать звонок
+			+e.social.footer-item
+				+e.social-title Socolor.ru в соц.сетях:
+				+e.social-list
+					+soc('vk')
+					+soc('instagram')
+					+soc('fb')
+					+soc('ym')
+		+e.nav
+			+e.service.footer-item
+				+e.title.title-line Сервис и поддержка
+				+e.UL.nav-list
+					+e.LI.nav-item
+						+e.A.nav-link(href='#') Условия доставки
+					+e.LI.nav-item
+						+e.A.nav-link(href='#') Контроль качества
+					+e.LI.nav-item
+						+e.A.nav-link(href='#') Варианты оплат
+					+e.LI.nav-item
+						+e.A.nav-link(href='#') Замечания и предложения
+					+e.LI.nav-item
+						+e.A.nav-link(href='#') Претензии по заказу
+					+e.LI.nav-item
+						+e.A.nav-link(href='#') Контакты
+			+e.catalof.footer-item
+				+e.title.title-line Каталог
+			+e.sale.footer-item
+				+e.title.title-line Система скидок
+		+e.bottom.footer-item
+			+e.A.logo(href='/')
+				+e.IMG.logo(src='img/mobile-footer-logo.png')
+			+e.copyright © 2007-2019
+				br/ Socolor.ru
+		+e.information Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ч. 2 ст. 437 Гражданского кодекса Российской Федерации. Для получения подробной информации о товаре и его стоимости, пожалуйста, обращайтесь к операторам.
 
 
 

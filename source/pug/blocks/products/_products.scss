@@ -1,0 +1,39 @@
+.products {
+  background-color: #fafafa;
+  padding-bottom: 20px;
+  padding-top: 25px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  &__item {
+    width: 46%;
+    margin-right: 11px;
+    margin-bottom: 20px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+
+  &__more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__more-link {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #ff6600;
+  }
+}

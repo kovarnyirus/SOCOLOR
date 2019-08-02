@@ -1,24 +1,24 @@
 .big-slider {
   position: relative;
-  margin-bottom: 35px;
-}
+  margin-bottom: 45px;
 
-.big-slider__btn {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
-  color: $text-color;
-  background: #FFFFFF;
-  border-radius: 2px;
-  padding: 8px 17px;
-  font-weight: bold;
+  &__btn {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: $text-color;
+    background: #FFFFFF;
+    border-radius: 2px;
+    padding: 8px 17px;
+    font-weight: bold;
+  }
 }
 
 .brand-slider {
   position: relative;
   //padding-left: 50px;
   //padding-right: 50px;
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(md) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -27,11 +27,13 @@
     display: flex;
     align-items: center;
   }
-  & .btn-prev{
+
+  & .btn-prev {
     position: absolute;
     left: -40px;
   }
-  & .btn-next{
+
+  & .btn-next {
     right: -40px;
   }
 }
@@ -72,7 +74,7 @@
   font-weight: bold;
 }
 
-.sale-slider{
+.sale-slider {
   position: relative;
 }
 
@@ -105,10 +107,57 @@
 
 .sale-slider__list {
   & .slick-list {
-  overflow: visible;
+    overflow: visible;
     margin-top: 40px;
   }
 }
-.sale-slider__list{
+
+.sale-slider__list {
   overflow: hidden;
 }
+
+
+.slick-dots li{
+  margin: 0;
+}
+
+.slick-dots li button::before{
+  font-size: 40px;
+}
+
+
+.slick-dots li button::before{
+  color: #000000;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button::before{
+  color: $attention-color;
+}
+
+.slick-next, .slick-prev{
+  bottom: -30px;
+  top: auto;
+  width: 28px;
+  z-index: 2;
+}
+.slick-next {
+  right: 0px;
+  &:before{
+    color: $inactive-color;
+    opacity: 1;
+    font-size: 28px;
+  }
+}
+.slick-prev {
+  left: 0px;
+  &:before{
+    color: $inactive-color;
+    opacity: 1;
+    font-size: 28px;
+  }
+}
+
+//.slick-dots li button::before{
+//  background-color: $inactive-color;
+//}

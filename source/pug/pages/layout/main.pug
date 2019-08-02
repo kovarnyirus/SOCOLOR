@@ -1,6 +1,11 @@
 include ../../_assets/bemto/bemto
 - set_bemto_settings({ modifier: "--" })
 
+include ../../blocks/header/header
+include ../../blocks/footer/footer
+include ../../blocks/mixins/_mixins
+include ../../blocks/top-nav/top-nav
+
 
 doctype html
 html(lang="ru")
@@ -25,13 +30,14 @@ html(lang="ru")
 
 
 	body
-
+		+header()
 		block pagecontent
+		+footer()
 
 
-		//script(type="text/javascript", , src="js/jquery.min.js")
+		script(type="text/javascript", , src="js/jquery.min.js")
 		//script(src="js/bootstrap.bundle.min.js")
-		//script(type="text/javascript", src="js/slick.js")
+		script(type="text/javascript", src="js/slick.js")
 		//script(type="text/javascript", src="js/jquery.magnific-popup.min.js")
 		//script(type="text/javascript", src="js/jquery.maskedinput.js")
 		//script(type="text/javascript", src="js/jquery.mCustomScrollbar.concat.min.js")

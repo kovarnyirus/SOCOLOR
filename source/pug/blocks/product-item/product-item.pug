@@ -1,0 +1,40 @@
+mixin product-item(img)
+	+b.product-item
+		+e.head
+			+e.A.img-link(href='#')
+				+e.IMG.img(src='img/products/nov-'+ img +'.jpg')
+			+e.icons-left
+				.sale 15%
+				.new New
+			+e.icon-right
+				+icon('icon-heart')
+		+e.-body
+			+e.H3.title
+				a(href='#') Marc Jacobs Парфюмерная вода 50 мл
+		+e.footer
+			+e.costs
+				+e.SPAN.cost  2 517 ₽
+				+e.SPAN.cost--old: del  3 146 ₽
+
+mixin product-item-slide(img)
+	+b.product-item--slide
+		+e.head
+			+e.A.img-link(href='#')
+				+e.IMG.img(src='img/products/nov-'+ img +'.jpg')
+			+e.icons-left
+				.sale.sale--big 15%
+				.new.new--big New
+			+e.icon-right
+				+icon('icon-heart')
+		+e.-body
+			+e.H3.title
+				a(href='#') Marc Jacobs Парфюмерная вода 50 мл
+			+stars(4, '(2)')
+		+e.footer
+			+e.costs
+				+e.SPAN.cost  2 517 ₽
+				+e.SPAN.cost--old: del  3 146 ₽
+			a.btn.btn--black
+				+icon('icon-basket')
+				| В корзину
+				+icon('icon-arrow-right')

@@ -1,11 +1,35 @@
 extends layout/main.pug
-
+include ../blocks/sliders/sliders
+include ../blocks/products/products
+include ../blocks/proposal/proposal
+include ../blocks/brands/brands
+include ../blocks/why-we/why-we
+include ../blocks/brand-block/brand-block
+include ../blocks/forms/forms
+include ../blocks/info-block/info-block
 
 block title
-  title Гланая
+	title Гланая
 
 block pagecontent
-  .main-page
+	+bigSlider()
+	.container
+		a.btn.btn--black Каталог товаров
+			+icon('icon-arrow-right')
+		a.btn.btn--orange Бренды
+			+icon('icon-arrow-right')
+	+products-tite('Новинки недели:', 'Удивите меня ещё')
+	+proposal()
+	+products-tite('Популярные товары:', 'Весь каталог товаров')
+	+brands()
+	+why-we()
+	+brand-block()
+	+products-tite-no-btn-no-line('Выбор покупателей:')
+	+distribution-form()
+	+info-block()
+
+
+
 
 
 

@@ -1,0 +1,17 @@
+
+
+mixin distribution-form()
+	+b.distribution
+		.container
+			h2.title-line.title-line--danger-color Узнавать о скидках  первым:
+			+e.FORM.form
+				+b.form-item
+					+e.LABEL.label
+						+e.INPUT.input(type='text' placeholder='Представьтесь, пожалуйста')
+				+b.form-item
+					+e.LABEL.label
+						+e.INPUT.input(type='text' placeholder='E-mail для рассылки')
+				a.btn.btn--orange Подписаться
+					+icon('icon-checked')
+
+

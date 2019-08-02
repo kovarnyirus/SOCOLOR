@@ -1,0 +1,25 @@
+.brands{
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: calc(50% - 10px) ;
+    border: 1px solid #c8c8c8;
+    margin-bottom: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    &:nth-child(2n){
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+  &__img{
+    width: 100px;
+  }
+}

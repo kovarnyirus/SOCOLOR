@@ -1,20 +1,55 @@
-.header{
-  position: relative;
-}
-.header-cat{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  &__wrapper{
-    position: relative;
+.header {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
   }
-  &__link{
-    position: absolute;
-    left: 15px;
-    transform: translateX(-100%);
+
+  &__left {
+    display: flex;
+    align-items: center;
   }
-  &--down{
-    top: 501px;
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo{
+    margin-top: 12px;
+  }
+
+  &__login {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  & .icon-padlock {
+    width: 30px;
+    height: 30px;
+    fill: #ff6600;
+  }
+
+  &__basket {
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-color: #000000;
+  }
+  & .icon-basket{
+    width: 17px;
+    height: 25px;
+    fill: #ffffff;
+  }
+
+  &__basket-cost {
+    display: none;
+  }
+  &__search{
+    padding-left: 20px;
+  }
+  & .icon-search{
+    width: 21px;
+    height: 21px;
   }
 }

@@ -1,0 +1,14 @@
+.brand-block{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &__slider-item{
+    max-height: 232px;
+  }
+  &__slider-list{
+    margin-bottom: 40px;
+  }
+  &__content{
+    padding-top: 25px;
+    background-color: #fafafa;
+  }
+}

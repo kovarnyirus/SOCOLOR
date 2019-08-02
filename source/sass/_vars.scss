@@ -1,15 +1,38 @@
+$width_mobile: 320px;
+$tablet-width: "min-width: 768px";
+$desktop_width: "min-width: 1000px";
+$retina-dpi: "min-resolution: 144dpi";
+$retina-dppx: "min-resolution: 1.5dppx";
+//$font-base: "Museo Sans Cyrl", "Arial", sans-serif;
+//$font-additional: "Arial", sans-serif;
+//$color_1: #111111;
+//$color_2: #ffffff;
+//$color_3: #444444;
+//$btn_hover: #5eaa2f;
+//$btn_active: rgba(255,255,255,0.3);
+//$main_menu_hover:rgba(17, 17, 17, 0.6);
+//$main_menu_down:rgba(17, 17, 17, 0.3);
+//$radio_hover: #bababa;
+//$radio_active: rgba(34,34,34,0.3);
+//$input_error: #ff8282;
+
+
+
+
 // Colors
 $white: #ffffff;
 $black: #000000;
-$text-color: #4D4D4D;
-$rejected-color: #EB5757;
-$highlighted-color: #9FA3A7;
-$hover-bg: #82C456;
-$active-bg: #459014;
-$select-color: #5CBF1A;
-$success-color: #5CBF1A;
-$check-color: #F2994A;
-$attention-color: #BE0B58;
+$text-color: #000000;
+//$rejected-color: #EB5757;
+//$highlighted-color: #9FA3A7;
+//$hover-bg: #82C456;
+//$active-bg: #459014;
+//$select-color: #5CBF1A;
+//$success-color: #5CBF1A;
+//$check-color: #F2994A;
+$attention-color: #ff6600;
+$inactive-color: #ececec;
+$danger-color: #ff6600;
 
 // Sizes
 $base-font-size: 14px;

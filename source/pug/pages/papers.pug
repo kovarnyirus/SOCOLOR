@@ -1,0 +1,15 @@
+extends layout/main.pug
+
+include ../blocks/forms/forms
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/papers/papers
+
+
+block title
+	title статьи
+
+block pagecontent
+	+breadcrumbs('Статьи', 'Главная')
+	+papers()
+	+distribution-form()
+

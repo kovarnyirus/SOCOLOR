@@ -1,0 +1,48 @@
+include ../product-item/product-item
+
+mixin products-tite(title, more)
+	+b.products
+		.container
+			h2.title-line= title
+			+e.list
+				+e.item
+					+product-item('1')
+				+e.item
+					+product-item('2')
+				+e.item
+					+product-item('3')
+				+e.item
+					+product-item('4')
+				+e.more
+					+e.A.more-link(href='')= more
+mixin products-tite-no-btn-no-line(title)
+	+b.products
+		.container
+			h2= title
+			+e.list
+				+e.item
+					+product-item('1')
+				+e.item
+					+product-item('2')
+				+e.item
+					+product-item('3')
+				+e.item
+					+product-item('4')
+
+mixin products-more( more)
+	+b.products
+		.container
+			+e.list
+				+e.item
+					+product-item('1')
+				+e.item
+					+product-item('2')
+				+e.item
+					+product-item('3')
+				+e.item
+					+product-item('4')
+				+e.more
+					+e.A.more-link(href='')= more
+
+
+
