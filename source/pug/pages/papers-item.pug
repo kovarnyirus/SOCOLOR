@@ -1,0 +1,17 @@
+extends layout/main.pug
+
+include ../blocks/forms/forms
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/products/products
+include ../blocks/papers-item/papers-item
+
+
+block title
+	title статьи
+
+block pagecontent
+	+breadcrumbs('Как добиться сияния кожи изнутри и снаружи!', 'Статьи', 'Главная')
+	+papers-item()
+	+products-tite-no-bg('Рекомендуем для Вас:', 'Весь каталог товаров')
+	+distribution-form()
+

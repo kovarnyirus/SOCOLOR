@@ -36,4 +36,7 @@
     text-transform: uppercase;
     border-bottom: 1px dashed #ff6600;
   }
+  &--no-bg{
+    background-color: transparent;
+  }
 }

@@ -62,6 +62,7 @@ jQuery(document).ready(function ($) {
 
         }]
     });
+
     $('.brand-block__slider-list').slick({
         infinite: true,
         speed: 300,
@@ -82,6 +83,27 @@ jQuery(document).ready(function ($) {
 
         }]
     });
+    //
+    // $('.papers-item__slider-list').slick({
+    //     infinite: true,
+    //     speed: 300,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     centerMode: true,
+    //     variableWidth: true,
+    //     dots: true,
+    //     arrows: true,
+    //     responsive: [{
+    //
+    //         breakpoint: 990,
+    //         settings: {
+    //             slidesToShow: 2,
+    //             arrows: true,
+    //         }
+    //
+    //
+    //     }]
+    // });
 
     // $('.sale-slider__list').slick({
     //     infinite: true,

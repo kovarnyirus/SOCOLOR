@@ -15,6 +15,7 @@ mixin products-tite(title, more)
 					+product-item('4')
 				+e.more
 					+e.A.more-link(href='')= more
+
 mixin products-tite-no-btn-no-line(title)
 	+b.products
 		.container
@@ -43,6 +44,23 @@ mixin products-more( more)
 					+product-item('4')
 				+e.more
 					+e.A.more-link(href='')= more
+
+mixin products-tite-no-bg(title, more)
+	+b.products--no-bg
+		.container
+			h2.title-line= title
+			+e.list
+				+e.item
+					+product-item('1')
+				+e.item
+					+product-item('2')
+				+e.item
+					+product-item('3')
+				+e.item
+					+product-item('4')
+				+e.more
+					+e.A.more-link(href='')= more
+
 
 
 
