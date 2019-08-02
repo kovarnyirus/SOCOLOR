@@ -44,7 +44,7 @@ gulp.task('style', function () {
 });
 
 gulp.task('copyImg', function() {
-    return gulp.src("source/img/**/**/**")
+    return gulp.src("source/img/**/**")
         .pipe(gulp.dest("./build/img/"))
 });
 
@@ -124,7 +124,7 @@ gulp.task('svg', () => {
 
 gulp.task("watch", function () {
     gulp.watch("source/**/*.{scss,sass}", gulp.series("style"));
-    gulp.watch("source/img/*.{png,jpg}", gulp.series("copyImg"));
+    gulp.watch("source/img/**/*.{png,jpg}", gulp.series("copyImg"));
     gulp.watch("source/js/*.js", gulp.series("copyJS"));
     gulp.watch("source/img/**/*.svg", gulp.series(["svg", "copyImg"]));
     gulp.watch("source/pug/**/*.pug", gulp.series("pug"));

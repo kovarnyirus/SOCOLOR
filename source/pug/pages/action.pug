@@ -1,0 +1,25 @@
+extends layout/main.pug
+
+include ../blocks/forms/forms
+include ../blocks/sliders/sliders
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/papers/papers
+include ../blocks/products/products
+include ../blocks/brand-page/brand-page
+include ../blocks/proposal/proposal
+include ../blocks/catalog/catalog
+include ../blocks/action/action
+
+
+block title
+	title Бренд
+
+block pagecontent
+	+breadcrumbs('акции', 'Главная')
+	.container
+		h2.title-line Акции
+	+action()
+
+	+distribution-form()
+
+
