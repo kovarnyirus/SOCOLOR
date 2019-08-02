@@ -1,0 +1,35 @@
+.catalog {
+  padding-top: 10px;
+
+  &__head {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fafafa;
+  }
+
+  &__head-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__sort {
+    margin-right: 20px;
+    width: 100%;
+    max-width: 169px;
+    border: none;
+    text-transform: uppercase;
+  }
+
+  &__filters {
+    display: flex;
+    align-items: center;
+  }
+
+  & .icon-settings {
+    margin-right: 10px;
+  }
+  &__filters-link{
+    border-bottom: 1px dashed $attention-color;
+  }
+
+}

@@ -1,0 +1,19 @@
+mixin catalog(title)
+	+b.catalog
+		.container
+			h2.title-line= title
+		+e.head
+			.container
+				+e.head-wrapper
+					+e.sort
+						+e.SELECT.sort
+							option Цена
+							option Цена
+							option Цена
+					+e.filters
+						+icon('icon-settings')
+						+e.A.filters-link(href='#') Фильтры
+		+e.body
+			+products-catalog('Удивите меня ещё')
+
+

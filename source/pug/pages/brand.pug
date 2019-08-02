@@ -1,0 +1,23 @@
+extends layout/main.pug
+
+include ../blocks/forms/forms
+include ../blocks/sliders/sliders
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/papers/papers
+include ../blocks/products/products
+include ../blocks/brand-page/brand-page
+include ../blocks/proposal/proposal
+include ../blocks/catalog/catalog
+
+
+block title
+	title Бренд
+
+block pagecontent
+	+breadcrumbs('Kerastase', 'Главная', 'Бренды')
+	+brand-info()
+	+proposal()
+	+catalog('Каталог Kerastase:')
+	+distribution-form()
+
+

@@ -1,0 +1,31 @@
+.brand-line{
+  background-color: #fafafa;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item{
+    width: calc(50% - 10px);
+  }
+  &__wrapper{
+    background-color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+  }
+  &__img{
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__link{
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

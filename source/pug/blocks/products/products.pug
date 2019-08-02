@@ -62,5 +62,21 @@ mixin products-tite-no-bg(title, more)
 					+e.A.more-link(href='')= more
 
 
+mixin products-catalog(more)
+	+b.products--no-bg
+		.container
+			+e.list
+				+e.item
+					+product-item('1')
+				+e.item
+					+product-item('2')
+				+e.item
+					+product-item('3')
+				+e.item
+					+product-item('4')
+				+e.more
+					+e.A.more-link(href='')= more
+
+
 
 
